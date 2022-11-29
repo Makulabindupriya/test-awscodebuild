@@ -4,15 +4,15 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 840532010037.dkr.ecr.us-west-2.amazonaws.com
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 792850570647.dkr.ecr.us-west-2.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t datascience-container-poc .
-      - docker tag datascience-container-poc:latest 840532010037.dkr.ecr.us-west-2.amazonaws.com/datascience-container-poc:latest    
+      - docker build -t docker-test .
+      - docker tag docker-test:latest 792850570647.dkr.ecr.us-west-2.amazonaws.com/docker-test:latest    
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 840532010037.dkr.ecr.us-west-2.amazonaws.com/datascience-container-poc:latest
+      - docker push 792850570647.dkr.ecr.us-west-2.amazonaws.com/docker-test:latest
