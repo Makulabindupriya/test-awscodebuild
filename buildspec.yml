@@ -3,6 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
+      - echo "this is the first test log file" > result1.log
       - /app/bin/cx
 artifacts:
   files:
