@@ -4,7 +4,6 @@ phases:
   build:
     commands:
       - /app/bin/cx
-      - sleep 300
 artifacts:
   files:
     - 'result1.log'
