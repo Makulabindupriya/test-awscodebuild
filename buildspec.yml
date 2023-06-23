@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - /app/bin/cx
-      - echo "this is the first test log file" > result1.log
+      - sleep 300
 artifacts:
   files:
     - 'result1.log'
