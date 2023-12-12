@@ -1,4 +1,1 @@
-Repo,Status,Branches1,Branches2,ProtectedBranches1,ProtectedBranches2,Tags1,Tags2,LatestTag1,LatestTag2,Releases1,Releases2,LatestRelease1,LatestRelease2,LatestReleaseTag1,LatestReleaseTag2,LatestReleaseDate1,LatestReleaseDate2,LatestCommit1,LatestCommit2,LatestCommitDate1,LatestCommitDate2,WebHooks1,WebHooks2
-docker-apigw-devportal-elasticsearch,Matched,0,0,2,2,1,1,7.16.3.0,7.16.3.0,0,0,NA,NA,NA,NA,NA,NA,e6fd3197aa62c1b5de36903f42d789a864759f7a,e6fd3197aa62c1b5de36903f42d789a864759f7a,2022-12-29T13:26:14Z,2022-12-29T13:26:14Z,1,1
-docker-apigw-gateway,Matched,0,0,2,2,30,30,10.11.0.16.0,10.11.0.16.0,1,1,10.7.0.6.0,10.7.0.6.0,10.7.0.6.0,10.7.0.6.0,2021-10-13T05:07:39Z,2021-10-13T05:07:39Z,779fdf5658cf015132170a3769c3e31450102ebf,779fdf5658cf015132170a3769c3e31450102ebf,2023-05-12T04:38:14Z,2023-05-12T04:38:14Z,1,1
-docker-apigw-devportal,Matched,0,0,2,2,1,1,10.11.0.16.0,10.11.0.16.0,0,0,NA,NA,NA,NA,NA,NA,4eb485ab5e222fe19d9ffe5b56763f28cf9806be,4eb485ab5e222fe19d9ffe5b56763f28cf9806be,2022-12-05T14:13:38Z,2022-12-05T14:13:38Z,1,1
+
