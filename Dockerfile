@@ -8,7 +8,7 @@ USER root
 RUN mkdir /tests
 WORKDIR /tests
 COPY test2.sh .
-RUN chmod +x test.sh
+RUN chmod +x test2.sh
 RUN touch test-docker.txt
 
 ## Set variable for clone url
