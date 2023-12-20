@@ -6,9 +6,9 @@ RUN yum update -y && yum install -y curl sudo
 
 USER root
 RUN mkdir /tests
-COPY . /tests
 WORKDIR /tests
-RUN chmod 777 test.sh
+COPY test2.sh .
+RUN chmod +x test.sh
 RUN touch test-docker.txt
 
 ## Set variable for clone url
@@ -26,7 +26,8 @@ RUN ls /tests
 
 ## Check version
 RUN aws --version
-CMD [ "/tests/test.sh" ]
+CMD ["sh", "test2.sh"]
+
 ## Copy generated report to s3 bucket
 #RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
 
