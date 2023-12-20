@@ -27,7 +27,7 @@ RUN ls /tests
 RUN aws --version
 
 ## Copy generated report to s3 bucket
-RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
+#RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
 
 ## Default command to execute playwright test
 #CMD ["npx", "playwright", "test"]
