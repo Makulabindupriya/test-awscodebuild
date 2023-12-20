@@ -14,8 +14,8 @@ RUN unzip awscliv2.zip && ./aws/install
 RUN pwd
 RUN ./test2.sh
 
-#CMD ["sh", "test2.sh"]
+CMD ["sh", "test2.sh"]
 
 #copy file from S3 bucket to ec2
-RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/TestSuite.robot testsuite.robot
+#RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/TestSuite.robot testsuite.robot
 #RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/aut-rf-spt temp --recursive
