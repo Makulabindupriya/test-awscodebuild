@@ -1,21 +1,10 @@
 ## CentOS 7 base image
 FROM centos:7 AS centos
 
-## Update the package manager and install necessary dependencies
-RUN yum update -y && yum install -y curl sudo
-
-USER root
 RUN mkdir /tests
 WORKDIR /tests
 COPY test2.sh .
 RUN chmod +x test2.sh
-RUN touch test-docker.txt
-
-## Set variable for clone url
-ARG GITHUB_URL
-ARG BRANCH_NAME
-RUN echo "Git Url: $GITHUB_URL"
-RUN echo "Git Branch name: $BRANCH_NAME"
 
 ## Install awscli
 RUN yum install -y python3 python3-pip
@@ -26,7 +15,7 @@ RUN ls /tests
 
 ## Check version
 RUN aws --version
-CMD ["sh", "./test2.sh"]
+CMD ["./test2.sh"]
 
 ## Copy generated report to s3 bucket
 #RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
