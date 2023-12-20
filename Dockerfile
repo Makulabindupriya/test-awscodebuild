@@ -17,5 +17,7 @@ RUN ./test2.sh
 #CMD ["sh", "test2.sh"]
 
 #copy file from S3 bucket to ec2
-RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
+RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test > test.txt
+RUN cat test.txt
+RUN ls
 #RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/aut-rf-spt temp --recursive
