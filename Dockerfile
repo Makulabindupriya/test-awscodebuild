@@ -6,7 +6,7 @@ WORKDIR /tests
 COPY test2.sh .
 RUN chmod +x test2.sh
 #installing pip
-RUN yum install python3-pip
+RUN yum install python3-pip -y
 RUN python3 -m pip install --upgrade pip 
 RUN pwd
 
