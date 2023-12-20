@@ -9,8 +9,8 @@ RUN chmod +x test2.sh
 RUN yum install python3-pip -y
 RUN python3 -m pip install --upgrade pip 
 RUN pwd
-
-CMD ["sh", "test2.sh"]
+RUN ./test2.sh
+#CMD ["sh", "test2.sh"]
 
 #copy file from S3 bucket to ec2
 #RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/TestSuite.robot testsuite.robot
