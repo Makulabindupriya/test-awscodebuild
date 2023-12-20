@@ -4,10 +4,6 @@ FROM centos:7 AS centos
 ## Update the package manager and install necessary dependencies
 RUN yum update -y && yum install -y curl sudo
 
-## Install Node.js
-RUN curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-RUN yum -y install nodejs
-
 USER root
 RUN mkdir /tests
 COPY . /tests
@@ -21,6 +17,7 @@ RUN echo "Git Url: $GITHUB_URL"
 RUN echo "Git Branch name: $BRANCH_NAME"
 
 ## Install awscli
+RUN apt-get update && apt-get install -y python3 python3-pip
 RUN pip install awscli
 
 ## List the files
