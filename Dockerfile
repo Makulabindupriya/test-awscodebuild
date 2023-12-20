@@ -26,7 +26,7 @@ RUN ls /tests
 
 ## Check version
 RUN aws --version
-CMD [ "./test.sh" ]
+CMD [ "/tests/test.sh" ]
 ## Copy generated report to s3 bucket
 #RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
 
