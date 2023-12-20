@@ -17,7 +17,7 @@ RUN echo "Git Url: $GITHUB_URL"
 RUN echo "Git Branch name: $BRANCH_NAME"
 
 ## Install awscli
-RUN apt-get update && apt-get install -y python3 python3-pip
+RUN yum install -y python3 python3-pip
 RUN pip install awscli
 
 ## List the files
