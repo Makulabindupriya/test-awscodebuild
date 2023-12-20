@@ -8,6 +8,7 @@ USER root
 RUN mkdir /tests
 COPY . /tests
 WORKDIR /tests
+RUN chmod 777 test.sh
 RUN touch test-docker.txt
 
 ## Set variable for clone url
@@ -25,7 +26,7 @@ RUN ls /tests
 
 ## Check version
 RUN aws --version
-
+CMD [ "sh", "test.sh" ]
 ## Copy generated report to s3 bucket
 #RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
 
