@@ -1,24 +1,17 @@
-## CentOS 7 base image
-FROM centos:7 AS centos
+FROM centos:7
 
-RUN mkdir /tests
-WORKDIR /tests
+LABEL org.label-schema.schema-version=1.0 org.label-schema.name="CentOS Base"
+
+WORKDIR /automation_Robot_app
 COPY test2.sh .
 RUN chmod +x test2.sh
+#installing pip
+RUN yum install python3-pip
+RUN python3 -m pip install --upgrade pip 
+RUN pwd
 
-## Install awscli
-RUN yum install -y python3 python3-pip
-RUN pip3 install awscli
+CMD ["sh", "test2.sh"]
 
-## List the files
-RUN ls /tests
-
-## Check version
-RUN aws --version
-CMD ["./test2.sh"]
-
-## Copy generated report to s3 bucket
-#RUN aws s3 cp /tests/test-docker.txt s3://git-backup-test
-
-## Default command to execute playwright test
-#CMD ["npx", "playwright", "test"]
+#copy file from S3 bucket to ec2
+#RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/TestSuite.robot testsuite.robot
+#RUN aws s3 cp s3://tf-rf-scripts-spe-qaqc-bucket/scripts/aut-rf-spt temp --recursive
