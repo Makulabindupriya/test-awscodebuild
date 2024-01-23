@@ -12,7 +12,7 @@ RUN python3 -m pip install --upgrade pip
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip && ./aws/install
 RUN pwd
-RUN ./test2.sh
+#RUN ./test2.sh
 
 #CMD ["sh", "test2.sh"]
 
