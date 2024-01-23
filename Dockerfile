@@ -1,4 +1,4 @@
-FROM centos:7
+FROM 770989854283.dkr.ecr.us-west-2.amazonaws.com/test:centos
 
 LABEL org.label-schema.schema-version=1.0 org.label-schema.name="CentOS Base"
 RUN mkdir /tests
